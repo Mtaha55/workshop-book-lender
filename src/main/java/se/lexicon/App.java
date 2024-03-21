@@ -1,26 +1,28 @@
 package se.lexicon;
-
+import se.lexicon.model.Book;
+import se.lexicon.model.Person;
 
 public class App {
     public static void main(String[] args) {
-        // todo: needs completion
+        // Creating persons
+        Person person1 = new Person("John", "Hans");
+        Person person2 = new Person("Alice", "Smith");
 
-        // Create a book instance
-        // Display book information
+        // Creating books
+        Book book1 = new Book("Python Programming", "Guido van Rossum");
+        Book book2 = new Book("Introduction to Algorithms", "Thomas H. Cormen");
 
-        // Create a person instance
-        // Display person information
+        // Loaning books
+        person1.loanBook(book1);
+        person2.loanBook(book2);
 
-        // Loan a book to the person
+        // Returning books
+        person1.returnBook(book1);
 
-        // Display person information after borrowing a book
-        // Display book information after borrowing a book
-
-        // Return the borrowed book
-
-        // Display person information after returning the book
-        // Display book information after borrowing a book
-
+        // Getting information
+        System.out.println(person1.getPersonInformation());
+        System.out.println(book1.getBookInformation());
+        System.out.println(book2.getBookInformation());
     }
-
 }
+
