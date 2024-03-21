@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
-    private static int sequencer = 1;
+    private static int sequencer = 0;
     private int id;
     private String firstName;
     private String lastName;
@@ -19,7 +19,7 @@ public class Person {
     }
 
     private static int getNextId() {
-        return sequencer++;
+        return ++sequencer;
     }
 
     public int getId() {
